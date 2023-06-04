@@ -9,11 +9,7 @@
   <ItemGroup>
     <Folder Include="Abstractions\" />
     <Folder Include="DomainEvents\" />
-    <Folder Include="Entities\" />
     <Folder Include="Enumerators\" />
-    <Folder Include="Errors\" />
-    <Folder Include="ValueObjects\" />
-    <Folder Include="Shared\" />
   </ItemGroup>
 
   <ItemGroup>
