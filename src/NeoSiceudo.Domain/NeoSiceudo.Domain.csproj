@@ -7,9 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstractions\" />
     <Folder Include="DomainEvents\" />
-    <Folder Include="Enumerators\" />
   </ItemGroup>
 
   <ItemGroup>

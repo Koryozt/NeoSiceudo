@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using NeoSiceudo.Domain.Entities;
+using NeoSiceudo.Domain.ValueObjects.Course;
+using NeoSiceudo.Domain.ValueObjects.Shared;
+
+namespace NeoSiceudo.Domain.Abstractions;
+
+public interface ICourseRepository
+{
+	Task<IEnumerable<Course>> GetAllCoursesAsync(CancellationToken cancellationToken);
+	Task<Course?> GetCourseByIdAsync(Guid id, CancellationToken cancellationToken);
+	Task<Course?> GetCourseByNameAsync(Name name, CancellationToken cancellationToken);
+	Task<Course?> GetCourseBySemesterNameAsync(Name name, CancellationToken cancellationToken87);
+	Task<Course?> GetCourseByCodeAsync(Code code, CancellationToken cancellationToken);
+	Task<Course?> GetCourseBySectionAsync(int section, CancellationToken cancellationToken);
+	Task<Course?> GetCourseByTeacherAsync(User teacher, CancellationToken cancellationToken);
+	Task AddAsync(Course course, CancellationToken cancellationToken);
+	void Update(Course course);
+}
