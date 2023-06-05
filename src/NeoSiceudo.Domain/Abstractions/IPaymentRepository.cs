@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NeoSiceudo.Domain.Entities;
+﻿using NeoSiceudo.Domain.Entities;
 using NeoSiceudo.Domain.ValueObjects.Payment;
 
 namespace NeoSiceudo.Domain.Abstractions;

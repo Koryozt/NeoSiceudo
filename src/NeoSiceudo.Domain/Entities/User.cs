@@ -31,7 +31,7 @@ public sealed class User : AggregateRoot, IAuditableEntity
 	public Name Lastname { get; private set; }
 	public Email Email { get; private set; }
 	public Password Password { get; private set; }
-	public IdentityCard	IdentityCard { get; private set; }
+	public IdentityCard IdentityCard { get; private set; }
 	public string? Photo { get; private set; }
 	public string Salt { get; init; }
 	public double AverageGrade { get; private set; }
