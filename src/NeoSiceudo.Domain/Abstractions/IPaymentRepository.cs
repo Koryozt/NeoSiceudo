@@ -11,5 +11,4 @@ public interface IPaymentRepository
 	Task<Payment?> GetPaymentByIdAsync(Guid id, CancellationToken cancellationToken);
 	Task<Payment?> GetPaymentByReferenceAsync(Reference reference, CancellationToken cancellationToken);
 	Task AddAsync(Payment payment, CancellationToken cancellationToken);
-	void Update(Payment payment);
 }

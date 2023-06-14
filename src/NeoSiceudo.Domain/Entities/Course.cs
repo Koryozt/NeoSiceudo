@@ -12,15 +12,19 @@ public sealed class Course : AggregateRoot, IAuditableEntity
 		Guid id,
 		Name name,
 		Code code,
-		User teacher) : base(id)
+		User teacher,
+		int credits,
+		int section) : base(id)
 	{
 		Name = name;
 		Code = code;
 		Teacher = teacher;
+		Credits = credits;
+		Section = section;
+		Grade = 0.0;
 	}
 
 	public Name Name { get; private set; }
-	public Name SemesterName { get; private set; }
 	public Code Code { get; private set; }
 
 	public int Credits { get; private set; }

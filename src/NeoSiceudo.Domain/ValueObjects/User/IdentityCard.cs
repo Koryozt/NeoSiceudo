@@ -7,8 +7,8 @@ namespace NeoSiceudo.Domain.ValueObjects.User;
 public sealed class IdentityCard : ValueObject
 {
 	public string Value { get; private set; }
-	private const int MinLength = 7;
-	private const int MaxLength = 9;
+	public const int MinLength = 7;
+	public const int MaxLength = 9;
 
 	private IdentityCard(string value)
 	{

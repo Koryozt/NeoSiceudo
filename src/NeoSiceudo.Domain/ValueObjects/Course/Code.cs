@@ -7,7 +7,7 @@ namespace NeoSiceudo.Domain.ValueObjects.Course;
 public sealed class Code : ValueObject
 {
 	public string Value { get; private set; }
-	private const int MaxLength = 6;
+	public const int MaxLength = 6;
 
 	private Code(string value)
 	{

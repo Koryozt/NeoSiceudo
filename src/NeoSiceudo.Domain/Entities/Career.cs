@@ -31,5 +31,4 @@ public sealed class Career : AggregateRoot, IAuditableEntity
 	public DateTime? LastModifiedUtc { get; set; }
 
 	public ICollection<User> Students { get; set; }
-	public ICollection<Course> Courses { get; set; }
 }

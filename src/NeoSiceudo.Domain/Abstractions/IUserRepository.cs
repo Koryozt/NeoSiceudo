@@ -10,7 +10,7 @@ public interface IUserRepository
 	Task<User?> GetByEmailAsync(Email email, CancellationToken cancellationToken);
 	Task<User?> GetUserByIdentityCardAsync(IdentityCard card, CancellationToken cancellationToken);
 	Task<User?> GetUserByCareerAsync(Career career, CancellationToken cancellationToken);
-	Task<User?> GetUserByTeachedCourseAsync(Course course, CancellationToken cancellationToken);
+	Task<User?> GetUserByTaughtCourseAsync(Course course, CancellationToken cancellationToken);
 	Task<bool> IsEmailInUseAsync(Email email, CancellationToken cancellationToken);
 	Task AddAsync(User user, CancellationToken cancellationToken);
 	void Update(User user);

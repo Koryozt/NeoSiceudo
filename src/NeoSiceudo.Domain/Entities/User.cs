@@ -14,7 +14,6 @@ public sealed class User : AggregateRoot, IAuditableEntity
 		Password password,
 		IdentityCard identityCard,
 		string? photo,
-		double averageGrade,
 		DateTime birthday) : base(id)
 	{
 		Firstname = firstname;
@@ -23,7 +22,8 @@ public sealed class User : AggregateRoot, IAuditableEntity
 		Password = password;
 		IdentityCard = identityCard;
 		Photo = photo;
-		AverageGrade = averageGrade;
+		AverageGrade = 0.0;
+		IsFrozen = false;
 		Birthday = birthday;
 	}
 
@@ -35,6 +35,7 @@ public sealed class User : AggregateRoot, IAuditableEntity
 	public string? Photo { get; private set; }
 	public string Salt { get; init; }
 	public double AverageGrade { get; private set; }
+	public bool IsFrozen { get; private set; }
 	public DateTime Birthday { get; private set; }
 	public DateTime CreatedOnUtc { get; init; }
 	public DateTime? LastModifiedUtc { get; set; }
@@ -43,7 +44,7 @@ public sealed class User : AggregateRoot, IAuditableEntity
 	public VerificationCode VerificationCode { get; private set; }
 	public ICollection<Career> Careers { get; set; }
 	public ICollection<Semester> Semesters { get; set; }
-	public ICollection<Course> CoursesTeached { get; set; }
+	public ICollection<Course> CoursesTaught { get; set; }
 	public ICollection<Payment> Payments { get; set; }
 
 }
