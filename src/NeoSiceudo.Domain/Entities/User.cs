@@ -40,8 +40,8 @@ public sealed class User : AggregateRoot, IAuditableEntity
 	public DateTime CreatedOnUtc { get; init; }
 	public DateTime? LastModifiedUtc { get; set; }
 
-	public Guid VerificationCodeId { get; private set; }
 	public VerificationCode VerificationCode { get; private set; }
+	public ICollection<Role> Roles { get; set; }
 	public ICollection<Career> Careers { get; set; }
 	public ICollection<Semester> Semesters { get; set; }
 	public ICollection<Course> CoursesTaught { get; set; }

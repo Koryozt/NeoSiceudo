@@ -2,7 +2,6 @@
 
 public enum UserKeyPrefix
 {
-	STUD = 1,
-	TEAC,
-	NONE
+	STU = 1,
+	TEA
 }

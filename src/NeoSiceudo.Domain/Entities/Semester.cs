@@ -19,7 +19,6 @@ public sealed class Semester : AggregateRoot, IAuditableEntity
 
 	public Name Name { get; private set; }
 	public Year Year { get; private set; }
-	public double AverageGrade => CoursesEnrolled.Sum(e => e.Grade);
 
 	public DateTime CreatedOnUtc { get; init; }
 	public DateTime? LastModifiedUtc { get; set; }

@@ -8,7 +8,7 @@ namespace NeoSiceudo.Application.Users.Queries;
 
 public sealed class UserQueryHandler :
 	IQueryHandler<GetAllUsersQuery, IEnumerable<UserQueryResponse>>,
-	IQueryHandler<GetUserByCareerQuery, UserQueryResponse>,
+	IQueryHandler<GetUsersByCareerQuery, IEnumerable<UserQueryResponse>>,
 	IQueryHandler<GetUserByEmailQuery, UserQueryResponse>,
 	IQueryHandler<GetUserByIdentityCardQuery, UserQueryResponse>,
 	IQueryHandler<GetUserByIdQuery, UserQueryResponse>,
@@ -28,7 +28,7 @@ public sealed class UserQueryHandler :
 		throw new NotImplementedException();
 	}
 
-	public Task<Result<UserQueryResponse>> Handle(GetUserByCareerQuery request, CancellationToken cancellationToken)
+	public Task<Result<IEnumerable<UserQueryResponse>>> Handle(GetUsersByCareerQuery request, CancellationToken cancellationToken)
 	{
 		throw new NotImplementedException();
 	}
