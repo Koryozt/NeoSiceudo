@@ -8,10 +8,16 @@
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="7.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.4" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.31.0" />
     <PackageReference Include="Quartz" Version="3.6.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.31.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NeoSiceudo.Application\NeoSiceudo.Application.csproj" />
     <ProjectReference Include="..\NeoSiceudo.Persistence\NeoSiceudo.Persistence.csproj" />
   </ItemGroup>
 
