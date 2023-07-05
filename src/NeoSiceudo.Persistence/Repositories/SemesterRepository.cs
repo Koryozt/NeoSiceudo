@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NeoSiceudo.Domain.Abstractions;
 using NeoSiceudo.Domain.Entities;
+using NeoSiceudo.Domain.Primitives;
 using NeoSiceudo.Domain.ValueObjects.Shared;
 
 namespace NeoSiceudo.Persistence.Repositories;
@@ -27,7 +28,7 @@ public class SemesterRepository : ISemesterRepository
 	public async Task<IEnumerable<Semester>> GetAllSemestersFromStudentAsync(User student, CancellationToken cancellationToken) =>
 		await _context
 			.Set<Semester>()
-			.Where(s => s.Student == student)
+			.Where(s => s.SemesterStudent == student)
 			.ToListAsync(cancellationToken);
 
 	public async Task<Semester?> GetSemesterByIdAsync(Guid id, CancellationToken cancellationToken) =>
@@ -39,7 +40,7 @@ public class SemesterRepository : ISemesterRepository
 	public async Task<Semester?> GetSemesterByNameAsync(Name name, CancellationToken cancellationToken) =>
 		await _context
 			.Set<Semester>()
-			.Where(s => s.Name == name)
+			.Where(s => s.SemesterName == name)
 			.FirstOrDefaultAsync(cancellationToken);
 
 	public void Update(Semester semester) =>

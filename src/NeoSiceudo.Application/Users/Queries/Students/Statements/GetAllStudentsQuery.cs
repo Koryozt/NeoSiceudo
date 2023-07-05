@@ -2,4 +2,4 @@
 
 namespace NeoSiceudo.Application.Users.Queries.Statements;
 
-public sealed record GetAllUsersQuery() : IQuery<IEnumerable<UserQueryResponse>>;
+public sealed record GetAllStudentsQuery() : IQuery<IEnumerable<StudentQueryResponse>>;

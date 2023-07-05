@@ -8,7 +8,7 @@ public sealed class CreateCareerCommandValidator : AbstractValidator<Career>
 {
 	public CreateCareerCommandValidator()
 	{
-		RuleFor(e => e.Name.Value)
+		RuleFor(e => e.CareerName.Value)
 			.NotEmpty()
 			.MaximumLength(Name.MaxLength)
 			.Must(e => e.Any(char.IsDigit) is not true);

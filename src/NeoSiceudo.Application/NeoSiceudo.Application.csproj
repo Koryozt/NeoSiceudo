@@ -8,8 +8,15 @@
 
   <ItemGroup>
     <Compile Remove="Payments\Commands\Update\**" />
+    <Compile Remove="Users\Commands\CreateTeacher\**" />
     <EmbeddedResource Remove="Payments\Commands\Update\**" />
+    <EmbeddedResource Remove="Users\Commands\CreateTeacher\**" />
     <None Remove="Payments\Commands\Update\**" />
+    <None Remove="Users\Commands\CreateTeacher\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Users\Commands\Register\RegisterCommandValidator.cs~RF2262b04.TMP" />
   </ItemGroup>
 
   <ItemGroup>

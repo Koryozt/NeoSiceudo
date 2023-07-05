@@ -13,18 +13,21 @@ public sealed class UserCommandHandler :
 	ICommandHandler<LoginCommand, string>,
 	ICommandHandler<UpdateUserCommand>
 {
-	private readonly IUserRepository _userRepository;
+	private readonly IStudentRepository _studentRepository;
+	private readonly ITeacherRepository _teacherRepository;
 	private readonly IUnitOfWork _uow;
 	private readonly IJwtProvider _provider;
 
 	public UserCommandHandler(
-		IUserRepository userRepository,
+		IStudentRepository studentRepository,
 		IUnitOfWork uow,
-		IJwtProvider provider)
+		IJwtProvider provider,
+		ITeacherRepository teacherRepository)
 	{
-		_userRepository = userRepository;
+		_studentRepository = studentRepository;
 		_uow = uow;
 		_provider = provider;
+		_teacherRepository = teacherRepository;
 	}
 
 	public Task<Result<Guid>> Handle(RegisterCommand request, CancellationToken cancellationToken)

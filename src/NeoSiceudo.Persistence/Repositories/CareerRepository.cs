@@ -40,7 +40,7 @@ public class CareerRepository : ICareerRepository
 	public async Task<Career?> GetCareerByNameAsync(Name name, CancellationToken cancellationToken) =>
 		await _context
 			.Set<Career>()
-			.Where(c => c.Name == name)
+			.Where(c => c.CareerName == name)
 			.FirstOrDefaultAsync(cancellationToken);
 
 	public void Update(Career career) =>

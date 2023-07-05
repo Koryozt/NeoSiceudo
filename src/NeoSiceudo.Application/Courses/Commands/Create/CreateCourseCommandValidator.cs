@@ -9,7 +9,7 @@ public sealed class CreateCourseCommandValidator : AbstractValidator<Course>
 {
 	public CreateCourseCommandValidator()
 	{
-		RuleFor(e => e.Name.Value)
+		RuleFor(e => e.CourseName.Value)
 			.NotEmpty()
 			.MaximumLength(Name.MaxLength);
 

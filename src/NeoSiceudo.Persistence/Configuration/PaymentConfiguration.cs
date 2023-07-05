@@ -13,8 +13,8 @@ internal sealed class PaymentConfiguration : IEntityTypeConfiguration<Payment>
 
 		builder.HasKey(p => p.Id);
 
-		builder.HasOne(p => p.User)
+		builder.HasOne(p => p.PaymentStudent)
 			.WithMany(u => u.Payments)
-			.HasForeignKey(p => p.UserId);
+			.HasForeignKey(p => p.PaymentStudentId);
 	}
 }

@@ -12,22 +12,22 @@ public sealed class Payment : AggregateRoot, IAuditableEntity
 		Reference reference,
 		DateTime date,
 		bool madeOnline,
-		User user) : base(id)
+		Student student) : base(id)
 	{
-		Subject = subject;
+		Concept = subject;
 		Reference = reference;
-		Date = date;
+		PerformedOn = date;
 		MadeOnline = madeOnline;
-		User = user;
+		PaymentStudent = student;
 	}
 
-	public Name Subject { get; private set; }
+	public Name Concept { get; private set; }
 	public Reference Reference { get; init; }
-	public DateTime Date { get; init; }
 	public bool MadeOnline { get; private set; }
+	public DateTime PerformedOn { get; init; }
 	public DateTime CreatedOnUtc { get; init; }
 	public DateTime? LastModifiedUtc { get; set; }
 
-	public Guid UserId { get; private set; }
-	public User User { get; private set; }
+	public Guid PaymentStudentId { get; private set; }
+	public Student PaymentStudent { get; private set; }
 }

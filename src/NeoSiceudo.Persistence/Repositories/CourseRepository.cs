@@ -39,7 +39,7 @@ public class CourseRepository : ICourseRepository
 	public async Task<Course?> GetCourseByNameAsync(Name name, CancellationToken cancellationToken) =>
 		await _context
 			.Set<Course>()
-			.Where(c => c.Name == name)
+			.Where(c => c.CourseName == name)
 			.FirstOrDefaultAsync(cancellationToken);
 	public async Task<Course?> GetCourseBySectionAsync(int section, CancellationToken cancellationToken) =>
 		await _context

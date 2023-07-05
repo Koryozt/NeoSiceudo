@@ -9,7 +9,7 @@ public sealed class CreatePaymentCommandValidator : AbstractValidator<Payment>
 {
 	public CreatePaymentCommandValidator()
 	{
-		RuleFor(e => e.Subject.Value)
+		RuleFor(e => e.Concept.Value)
 			.NotEmpty()
 			.MaximumLength(Name.MaxLength);
 
@@ -18,7 +18,7 @@ public sealed class CreatePaymentCommandValidator : AbstractValidator<Payment>
 			.Must(e => !e.Any(char.IsLetter))
 			.MaximumLength(Reference.MaxLength);
 
-		RuleFor(e => e.Date)
+		RuleFor(e => e.PerformedOn)
 			.NotEmpty()
 			.ExclusiveBetween(DateTime.MinValue, DateTime.Now);
 	}

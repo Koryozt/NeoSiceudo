@@ -2,7 +2,8 @@
 
 public static class Tables
 {
-	public const string User = "Users";
+	public const string Student = "Students";
+	public const string Teacher = "Teachers";
 
 	public const string Career = "Careers";
 

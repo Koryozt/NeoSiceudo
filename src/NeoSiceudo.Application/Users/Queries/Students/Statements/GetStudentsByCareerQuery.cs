@@ -3,4 +3,4 @@ using NeoSiceudo.Domain.Entities;
 
 namespace NeoSiceudo.Application.Users.Queries.Statements;
 
-public sealed record GetUserByTaughtCourseQuery(Course Course) : IQuery<UserQueryResponse>;
+public sealed record GetStudentsByCareerQuery(Career Career) : IQuery<IEnumerable<StudentQueryResponse>>;

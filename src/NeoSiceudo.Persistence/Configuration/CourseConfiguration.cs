@@ -17,7 +17,7 @@ internal sealed class CourseConfiguration : IEntityTypeConfiguration<Course>
 
 		builder.HasAlternateKey(c => c.Section);
 
-		builder.Property(c => c.Name)
+		builder.Property(c => c.CourseName)
 			.HasConversion(
 				x => x.Value,
 				v => Name.Create(v).Value);
@@ -32,10 +32,9 @@ internal sealed class CourseConfiguration : IEntityTypeConfiguration<Course>
 			.HasForeignKey(c => c.TeacherId)
 			.OnDelete(DeleteBehavior.NoAction);
 
-		builder.HasMany(c => c.Enrolled)
-			.WithOne(e => e.Course)
-			.HasForeignKey(c => c.CourseId)
-			.OnDelete(DeleteBehavior.NoAction);
+		builder.HasOne(c => c.Semester)
+			.WithMany(s => s.CoursesEnrolled)
+			.HasForeignKey(s => s.SemesterId);
 
 	}
 }

@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using NeoSiceudo.Domain.Entities;
+using NeoSiceudo.Domain.Primitives;
 using NeoSiceudo.Domain.ValueObjects.Shared;
 using NeoSiceudo.Domain.ValueObjects.User;
 

@@ -1,4 +1,5 @@
 ﻿using NeoSiceudo.Domain.Entities;
+using NeoSiceudo.Domain.Primitives;
 using NeoSiceudo.Domain.ValueObjects.Semester;
 using NeoSiceudo.Domain.ValueObjects.Shared;
 

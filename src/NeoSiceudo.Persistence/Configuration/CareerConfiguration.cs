@@ -15,9 +15,9 @@ internal sealed class CareerConfiguration : IEntityTypeConfiguration<Career>
 
 		builder.HasKey(c => c.Id);
 
-		builder.HasIndex(c => c.Name).IsUnique();
+		builder.HasIndex(c => c.CareerName).IsUnique();
 
-		builder.Property(c => c.Name)
+		builder.Property(c => c.CareerName)
 			.HasConversion(x => x.Value, v => Name.Create(v).Value);
 
 		builder.Property(c => c.BossName)
@@ -30,7 +30,7 @@ internal sealed class CareerConfiguration : IEntityTypeConfiguration<Career>
 
 		builder.HasMany(c => c.Students)
 			.WithMany(u => u.Careers)
-			.UsingEntity<UserCareer>();
+			.UsingEntity<StudentCareer>();
 
 	}
 }

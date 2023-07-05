@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NeoSiceudo.Domain.Abstractions;
 using NeoSiceudo.Domain.Entities;
+using NeoSiceudo.Domain.Primitives;
 using NeoSiceudo.Domain.ValueObjects.Payment;
 
 namespace NeoSiceudo.Persistence.Repositories;
@@ -39,12 +40,12 @@ public class PaymentRepository : IPaymentRepository
 	public async Task<IEnumerable<Payment>> GetPaymentsByDate(DateTime date, CancellationToken cancellationToken) =>
 		await _context
 			.Set<Payment>()
-			.Where(c => c.Date == date)
+			.Where(c => c.PerformedOn == date)
 			.ToListAsync(cancellationToken);
 
-	public async Task<IEnumerable<Payment>> GetPaymentsByUserAsync(User user, CancellationToken cancellationToken) =>
+	public async Task<IEnumerable<Payment>> GetPaymentsByStudentAsync(Student student, CancellationToken cancellationToken) =>
 		await _context
 			.Set<Payment>()
-			.Where(p => p.User == user)
+			.Where(p => p.PaymentStudent == student)
 			.ToListAsync(cancellationToken);
 }

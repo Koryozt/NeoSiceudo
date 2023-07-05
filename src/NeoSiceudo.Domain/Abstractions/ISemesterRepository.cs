@@ -1,4 +1,5 @@
 ﻿using NeoSiceudo.Domain.Entities;
+using NeoSiceudo.Domain.Primitives;
 using NeoSiceudo.Domain.ValueObjects.Shared;
 
 namespace NeoSiceudo.Domain.Abstractions;

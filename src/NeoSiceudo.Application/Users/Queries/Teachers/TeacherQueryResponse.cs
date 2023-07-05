@@ -4,7 +4,7 @@ using NeoSiceudo.Domain.ValueObjects.User;
 
 namespace NeoSiceudo.Application.Users.Queries;
 
-public sealed record UserQueryResponse(
+public sealed record TeacherQueryResponse(
 	Guid Id,
 	Name Firstname,
 	Name Lastname,
@@ -14,7 +14,7 @@ public sealed record UserQueryResponse(
 	string Photo,
 	DateTime Birthday,
 	double AverageGrade,
-	IEnumerable<Career> Careers,
-	IEnumerable<Semester> Semesters,
+	Name Degree,
+	bool IsBoos,
 	ICollection<Course> CoursesTaught
 	);

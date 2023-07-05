@@ -2,4 +2,4 @@
 
 namespace NeoSiceudo.Application.Users.Queries.Statements;
 
-public sealed record GetUserByIdQuery(Guid Id) : IQuery<UserQueryResponse>;
+public sealed record GetStudentByIdQuery(Guid Id) : IQuery<StudentQueryResponse>;

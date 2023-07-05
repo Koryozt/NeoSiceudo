@@ -1,12 +1,12 @@
-﻿using NeoSiceudo.Domain.Primitives;
+﻿using NeoSiceudo.Domain.Entities;
 using NeoSiceudo.Domain.ValueObjects.Shared;
 using NeoSiceudo.Domain.ValueObjects.User;
 
-namespace NeoSiceudo.Domain.Entities;
+namespace NeoSiceudo.Domain.Primitives;
 
-public sealed class User : AggregateRoot, IAuditableEntity
+public abstract class User : AggregateRoot, IAuditableEntity
 {
-	public User(
+	protected User(
 		Guid id,
 		Name firstname,
 		Name lastname,
@@ -22,8 +22,6 @@ public sealed class User : AggregateRoot, IAuditableEntity
 		Password = password;
 		IdentityCard = identityCard;
 		Photo = photo;
-		AverageGrade = 0.0;
-		IsFrozen = false;
 		Birthday = birthday;
 	}
 
@@ -34,17 +32,10 @@ public sealed class User : AggregateRoot, IAuditableEntity
 	public IdentityCard IdentityCard { get; private set; }
 	public string? Photo { get; private set; }
 	public string Salt { get; init; }
-	public double AverageGrade { get; private set; }
-	public bool IsFrozen { get; private set; }
 	public DateTime Birthday { get; private set; }
 	public DateTime CreatedOnUtc { get; init; }
 	public DateTime? LastModifiedUtc { get; set; }
 
 	public VerificationCode VerificationCode { get; private set; }
 	public ICollection<Role> Roles { get; set; }
-	public ICollection<Career> Careers { get; set; }
-	public ICollection<Semester> Semesters { get; set; }
-	public ICollection<Course> CoursesTaught { get; set; }
-	public ICollection<Payment> Payments { get; set; }
-
 }

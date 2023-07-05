@@ -1,4 +1,5 @@
 ﻿using NeoSiceudo.Domain.Entities;
+using NeoSiceudo.Domain.Primitives;
 
 namespace NeoSiceudo.Application.Abstractions;
 

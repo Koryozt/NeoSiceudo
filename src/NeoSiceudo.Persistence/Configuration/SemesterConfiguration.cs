@@ -13,9 +13,9 @@ internal sealed class SemesterConfiguration : IEntityTypeConfiguration<Semester>
 
 		builder.HasKey(s => s.Id);
 
-		builder.HasOne(s => s.Student)
+		builder.HasOne(s => s.SemesterStudent)
 			.WithMany(u => u.Semesters)
-			.HasForeignKey(s => s.StudentId);
+			.HasForeignKey(s => s.SemesterStudentId);
 
 		builder.HasMany(s => s.CoursesEnrolled)
 			.WithOne(c => c.Semester)

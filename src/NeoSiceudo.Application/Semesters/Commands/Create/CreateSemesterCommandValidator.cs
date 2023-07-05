@@ -8,7 +8,7 @@ public sealed class CreateSemesterCommandValidator : AbstractValidator<Semester>
 {
 	public CreateSemesterCommandValidator()
 	{
-		RuleFor(e => e.Name.Value)
+		RuleFor(e => e.SemesterName.Value)
 			.NotEmpty()
 			.MaximumLength(Name.MaxLength);
 
@@ -17,7 +17,7 @@ public sealed class CreateSemesterCommandValidator : AbstractValidator<Semester>
 			.GreaterThanOrEqualTo(2000)
 			.LessThanOrEqualTo(DateTime.Now.Year);
 
-		RuleFor(e => e.StudentId)
+		RuleFor(e => e.SemesterStudentId)
 			.NotEmpty();
 	}
 }

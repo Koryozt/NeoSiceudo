@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using NeoSiceudo.Application.Abstractions;
-using NeoSiceudo.Domain.Entities;
+using NeoSiceudo.Domain.Primitives;
 
 namespace NeoSiceudo.Infrastructure.Authentication;
 

@@ -1,5 +1,5 @@
 ﻿using NeoSiceudo.Application.Abstractions.Messaging;
-using NeoSiceudo.Domain.Entities;
+using NeoSiceudo.Domain.Primitives;
 
 namespace NeoSiceudo.Application.Semesters.Queries.Statements;
 

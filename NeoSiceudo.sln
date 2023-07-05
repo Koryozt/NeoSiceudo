@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NeoSiceudo.Application", "s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NeoSiceudo.Persistence", "src\NeoSiceudo.Persistence\NeoSiceudo.Persistence.csproj", "{6688586D-9511-458D-A273-DD7B3658BBBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeoSiceudo.Infrastructure", "src\NeoSiceudo.Infrastructure\NeoSiceudo.Infrastructure.csproj", "{05352624-8AC7-4029-AE49-D1190AFEBA7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NeoSiceudo.Infrastructure", "src\NeoSiceudo.Infrastructure\NeoSiceudo.Infrastructure.csproj", "{05352624-8AC7-4029-AE49-D1190AFEBA7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

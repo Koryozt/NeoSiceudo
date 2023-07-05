@@ -1,4 +1,5 @@
 ﻿using NeoSiceudo.Application.Abstractions.Messaging;
+using NeoSiceudo.Domain.Enumerators;
 using NeoSiceudo.Domain.ValueObjects.Shared;
 using NeoSiceudo.Domain.ValueObjects.User;
 
@@ -11,4 +12,5 @@ public sealed record RegisterCommand(
 		Password Password,
 		IdentityCard IdentityCard,
 		string? Photo,
-		DateTime Birthday) : ICommand<Guid>;
+		DateTime Birthday,
+		UserKeyPrefix KeyPrefix) : ICommand<Guid>;

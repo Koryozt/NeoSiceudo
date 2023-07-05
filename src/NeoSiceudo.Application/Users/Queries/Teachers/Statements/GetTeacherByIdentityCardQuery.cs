@@ -3,4 +3,4 @@ using NeoSiceudo.Domain.ValueObjects.User;
 
 namespace NeoSiceudo.Application.Users.Queries.Statements;
 
-public sealed record GetUserByEmailQuery(Email Email) : IQuery<UserQueryResponse>;
+public sealed record GetTeacherByIdentityCardQuery(IdentityCard IdentityCard) : IQuery<TeacherQueryResponse>;

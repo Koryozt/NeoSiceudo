@@ -1,4 +1,4 @@
-﻿using NeoSiceudo.Domain.Entities;
+﻿using NeoSiceudo.Domain.Primitives;
 using NeoSiceudo.Domain.ValueObjects.VerificationCode;
 
 namespace NeoSiceudo.Application.Codes.Queries;
